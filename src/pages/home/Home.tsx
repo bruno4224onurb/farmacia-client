@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom'
 import homeLogo from '../../assets/home.png'
 import './Home.css';
 
@@ -13,8 +14,8 @@ function Home() {
               <p className='text-xl'>Expresse aqui seus pensamentos e opniões</p>
   
               <div className="flex justify-around gap-4">
-              
-                <button className='rounded bg-white text-green-600 py-2 px-4 text-2xl hover:text-gray-500'>Ver produtos</button>
+
+                <Link to='/produtos' className='hover:text-gray-300 text-green-600 text-4xl'>Ver Produtos</Link>
               </div>
             </div>
   

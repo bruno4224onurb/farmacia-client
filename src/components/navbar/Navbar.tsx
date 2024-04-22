@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../contexts/AuthContext'
 
 
 function Navbar() {
@@ -9,15 +11,14 @@ function Navbar() {
     <>
      <div className='w-full bg-green-600 text-white flex justify-center py-4'>
           <div className="container flex justify-between text-lg">
-            <div className='text-2xl font-bold uppercase'>Farmácia da Ju</div>
+            <Link to='/home' className='text-2xl font-bold uppercase'>Farmácia da Ju</Link>
 
             <div className='flex gap-10'>
-              <div className='hover:text-gray-500'>Home</div>
-              <div className='hover:text-gray-500'>Produtos</div>
-              <div className='hover:text-gray-500'>Categorias</div>
-              <div className='hover:text-gray-500'>Cadastrar Categoria</div>
-              <div className='hover:text-gray-500'>Perfil</div>
-              <div className='hover:text-gray-500'>Sair</div>
+              <Link to='/produtos' className='hover:underline'>Produtos</Link>
+              <Link to='/categorias' className='hover:underline'>Categorias</Link>
+              <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categorias</Link>
+              <Link to='/cadastroProduto' className='hover:underline'>Cadastrar Produtos</Link>
+              <Link to='/perfil' className='hover:underline'>Perfil</Link>
             </div>
           </div>
         </div>
